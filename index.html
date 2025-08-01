@@ -831,7 +831,8 @@
     renderCart();
     // URL パラメータを確認し、管理者モードなら商品追加フォームを表示
     const params = new URLSearchParams(window.location.search);
-    if (params.get('admin') === '1') {
+    // 管理者モード (?admin=1023 の場合) のときに商品追加フォームを表示
+    if (params.get('admin') === '1023') {
       const card = document.getElementById('product-form-card');
       if (card) card.style.display = '';
     }
